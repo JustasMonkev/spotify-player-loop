@@ -23,8 +23,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Debug repository access
-        run: |
-          git ls-remote https://github.com/JustasMonkev/spotify-loop-player.git
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
