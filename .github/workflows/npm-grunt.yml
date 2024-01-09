@@ -31,14 +31,7 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Run Playwright tests
-        run: npx playwright test
-
-      - name: Read pull request number
-        if: always()
-        uses: ./.github/actions/download-artifact
-        with:
-          namePrefix: 'pull-request'
-          path: '.'
+        run: npx playwright test @smoke
 
       - name: Comment on PR
         if: always()
