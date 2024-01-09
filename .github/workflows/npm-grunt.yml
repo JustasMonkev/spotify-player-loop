@@ -22,7 +22,6 @@ jobs:
     # if: ${{ github.event.workflow_run.event == 'pull_request' }}
     runs-on: ubuntu-latest
     steps:
-      - name: Debug repository access
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
