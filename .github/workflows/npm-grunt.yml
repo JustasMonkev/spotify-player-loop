@@ -110,3 +110,4 @@ jobs:
                   `Merge [workflow run](${mergeWorkflowUrl}).`
                 ].join('\n'),
               }
+            });
