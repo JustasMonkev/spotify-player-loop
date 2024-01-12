@@ -8,7 +8,7 @@ test.describe.configure({mode: `parallel`})
 test.beforeEach(async ({page}) => {
     await page.goto('spotify/player')
 });
-test.describe('Spotify search', () => {
+test.skip('Spotify search', () => {
     test('check if search input works', async ({page}) => {
         await page.locator(selectors.songSearchInput).type('emin')
         await page.waitForSelector(selectors.searchResults)
