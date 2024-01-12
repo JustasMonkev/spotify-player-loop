@@ -41,7 +41,7 @@ jobs:
           script: |
             const prNumber = context.payload.pull_request.number;
             const username = context.payload.pull_request.user.login;
-            const message = `Hello @${username}! 👋 Welcome to the PR. Your PR number is #${prNumber}.
+            const message = `Hello @${username}! 👋 Welcome to the PR. Your PR number is ${prNumber}`.
             github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
