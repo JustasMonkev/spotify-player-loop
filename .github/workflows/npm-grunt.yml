@@ -35,9 +35,11 @@ jobs:
         run: npx playwright test
       - name: upload reports
         uses: actions/upload-artifact@v2
+        if: always()
         with:
           name: playwright-report
           path: playwright-report/
+          retention-days: 1
       - name: Hello PR and List Files
         uses: actions/github-script@v6
         if: always()
@@ -71,5 +73,7 @@ jobs:
                 body: fileListMessage
               });
             }
+      - name: List directories after tests
+        run: ls -la
 
 
