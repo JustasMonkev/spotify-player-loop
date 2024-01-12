@@ -38,14 +38,9 @@ jobs:
         with:
           name: playwright-report
           path: playwright-report/
-
-      - name: Hello PR
-        uses: actions/github-script@v6
-        if: always()
-        with:
-          script: |
       - name: Hello PR and List Files
         uses: actions/github-script@v6
+        if: always()
         with:
           script: |
             const prNumber = context.payload.pull_request.number;
